@@ -37,12 +37,12 @@ Feito isso, a aplicação já pode ser utilizada.
 
 Para criarmos as requisições, precisamos realizar as seguintes configurações:
 
-Tipo de requisição: GET
-Link da requisição: http://localhost:3000/quotes/<TAG>
-Realizar a configuração do token de acesso:
-
-Ir na aba Headers, incluir a linha:
-Key: Authorization | Value: Token inovamind
+    Tipo de requisição: GET
+    Link da requisição: http://localhost:3000/quotes/<TAG>
+    
+    Realizar a configuração do token de acesso:
+    > Aba Headers, incluir a linha:
+        > Key: Authorization | Value: Token inovamind
 
 CÓDIGOS DE RETORNO:
 
