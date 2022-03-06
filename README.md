@@ -41,8 +41,8 @@ Para criarmos as requisições, precisamos realizar as seguintes configurações
     Link da requisição: http://localhost:3000/quotes/<TAG>
     
     Realizar a configuração do token de acesso:
-    > Aba Headers, incluir a linha:
-        > Key: Authorization | Value: Token inovamind
+    Aba Headers, incluir a linha:
+        - Key: Authorization | Value: Token inovamind
 
 CÓDIGOS DE RETORNO:
 
