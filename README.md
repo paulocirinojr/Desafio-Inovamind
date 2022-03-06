@@ -1,24 +1,53 @@
-# README
+# Teste para vaga Backend - Inovamind
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este teste tem como tarefa a criação de um web crawler para realizar a busca de frases no site http://quotes.toscrape.com/.
+A aplicação deve receber a tag como parâmetro e, baseando-se nessa tag, buscar frases que estejam classificadas de acordo com essa tag.
 
-Things you may want to cover:
+## Tecnologias utilizadas
 
-* Ruby version
+|Software | Versão|
+|--------|-----------|
+| Ubuntu | 20.04.4 LTS |
+| Ruby  | 3.0.0 |
+| Rails | 7.0.2.2 |
+| MongoDB | 5.0.6 |
 
-* System dependencies
+## Preparação do ambiente
 
-* Configuration
+Para utilizar a aplicação, devemos realizar a instalação dos componentes acima. Após a instalação, iremos iniciar o serviço de banco de dados e habilitar sua inicialização (opcional).
 
-* Database creation
+    > systemctl start mongod
+    > systemctl enable mongod (OPCIONAL)
 
-* Database initialization
+Após a inicialização do serviço, podemos baixar a aplicação e começar a utilizar. 
 
-* How to run the test suite
+## Executando a aplicação
 
-* Services (job queues, cache servers, search engines, etc.)
+Após baixada, execute o terminal no diretório onde se localiza a aplicação e execute os seguintes comandos:
 
-* Deployment instructions
+    Instalar GEMs necessárias para o funcionamento da aplicação:
+    > bundle install
 
-* ...
+    Iniciar o serviço:
+    > rails s.
+
+Feito isso, a aplicação já pode ser utilizada. 
+
+## Criando requisições via PostMan
+
+Para criarmos as requisições, precisamos realizar as seguintes configurações:
+
+Tipo de requisição: GET
+Link da requisição: http://localhost:3000/quotes/<TAG>
+Realizar a configuração do token de acesso:
+
+Ir na aba Headers, incluir a linha:
+Key: Authorization | Value: Token inovamind
+
+CÓDIGOS DE RETORNO:
+
+| Código | Descrição |
+|--------|-----------|
+| 200 | É recebido caso a requisição possua dados válidos |
+| 204  | É recebido caso não exista nenhum cadastro no BD e/ou site com a tag solicitada |
+
