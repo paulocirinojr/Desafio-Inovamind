@@ -29,7 +29,7 @@ Após baixada, execute o terminal no diretório onde se localiza a aplicação e
     > bundle install
 
     Iniciar o serviço:
-    > rails s.
+    > rails s
 
 Feito isso, a aplicação já pode ser utilizada. 
 
@@ -42,7 +42,7 @@ Para criarmos as requisições, precisamos realizar as seguintes configurações
     
     Realizar a configuração do token de acesso:
     Aba Headers, incluir a linha:
-        - Key: Authorization | Value: Token inovamind
+    Key: Authorization - Value: Token inovamind
 
 CÓDIGOS DE RETORNO:
 
