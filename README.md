@@ -49,5 +49,5 @@ CÓDIGOS DE RETORNO:
 | Código | Descrição |
 |--------|-----------|
 | 200 | É recebido caso a requisição possua dados válidos |
-| 204  | É recebido caso não exista nenhum cadastro no BD e/ou site com a tag solicitada |
+| 404  | É recebido caso não exista nenhum cadastro no BD e/ou site com a tag solicitada |
 
