@@ -16,14 +16,16 @@ class QuotesController < ApplicationController
   # Retorna a lista com todos quotes cadastrados
   # CÓDIGOS DE RETORNO:
   # 200 - Caso a requisição possua dados válidos
-  # 204 - Caso não exista nenhum cadastro no BD
+  # 404 - Caso não exista nenhum cadastro no BD
   def index
     @quotes = Quote.all
 
     if (@quotes.length > 0)
       render json: @quotes, status: :ok
     else
-      render json: @quotes, status: :no_content
+      render json: {
+        info: "Nenhuma frase encontrada no banco de dados!"
+      }, status: :not_found
     end
   end
 
@@ -65,7 +67,9 @@ class QuotesController < ApplicationController
     if (@quotes.length > 0)
       render json: @quotes, status: :ok
     else
-      render json: @quotes, status: :no_content
+      render json: {
+        info: "Nenhuma frase encontrada com a tag informada!"
+      }, status: :not_found
     end
   end
 
